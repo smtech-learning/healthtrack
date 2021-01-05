@@ -11,7 +11,7 @@ export default function Logout() {
   const history = useHistory();
   return (
       <div>
-          <h1> You have not logged in yet. Plese logi n here </h1>
+          <h1> You have not logged in yet. Plese login here </h1>
           <h2>  Login Link. </h2>
     </div>
   )
