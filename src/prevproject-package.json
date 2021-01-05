@@ -1,0 +1,42 @@
+{
+  "name": "aws-react-server-less-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aws-amplify/ui-react": "^0.2.33",
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-regular-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@material-ui/core": "^4.9.0",
+    "@material-ui/styles": "^4.9.0",
+    "aws-amplify": "^3.0.8",
+    "aws-amplify-react": "^2.2.2",
+    "bootstrap": "^3.4.1",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^16.8.6",
+    "react-html-id": "^0.1.5",
+    "react-icons": "^3.8.0",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "2.1.8",
+    "styled-components": "^4.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "aws s3 sync build/ s3://thecloudthoughts.com",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

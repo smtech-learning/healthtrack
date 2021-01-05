@@ -1,0 +1,312 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.left-pannel {
+  width: 60%;
+  background-color: white;
+  height: 100%;
+}
+
+.right-pannel {
+  width: 40%;
+  background: skyblue;
+  height: 100%;
+  position: relative;
+}
+
+.center-login-section {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  width: 100%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+}
+
+.my-own-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.register-container {
+  /* background: skyblue; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 450px;
+  padding: 10px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#over img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.center-login-section {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.image-size-medium {
+  width: 500px;
+  height: 500px;
+}
+
+.image-size-min {
+  width: 250px;
+  height: 250px;
+}
+
+.App-header {
+  background-color: black;
+  min-height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  justify-content: space-evenly;
+}
+
+.inv-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.inv-container div {
+  justify-content: space-between;
+  border: 1px solid #ccc;
+}
+
+.box1 {
+  flex: 2;
+  order: 4;
+  background: lightblue;
+  border-radius: 5px;
+  padding-bottom: 100px;
+  box-shadow: 0 0 10px;
+}
+
+.box2 {
+  flex: 1;
+  order: 1;
+  background: lightblue;
+  border-radius: 5px;
+  padding-bottom: 100px;
+}
+
+.box3 {
+  flex: 1;
+  order: 2;
+  background: lightblue;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.box4 {
+  flex: 1;
+  order: 3;
+  background: lightcoral;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.errorStyle {
+  color: red;
+}
+
+.container {
+  width: 90%;
+}
+
+.login-container {
+  min-height: 100vh;
+  background-color: skyblue;
+  display: grid;
+  grid-template-columns: 0.5fr auto 0.5fr;
+  grid-template-rows: 0.15fr auto 0.1fr;
+  grid-template-areas: "header header header" "body body body" "footer footer footer";
+}
+
+.header-item {
+  grid-area: header;
+  background-color: white;
+}
+
+.body-item {
+  grid-area: body;
+}
+.body-item1 {
+  grid-area: body;
+  background-color: white;
+  /* background-image: url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
+  background-image: url("../Images/cloud-computing.jpg");
+  /* background-image: url("../Images/Serverless.png"); */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-item {
+  grid-area: footer;
+  background-color: #ccc;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.social-icon-footer {
+  margin: 10% 15%;
+}
+
+.social-icon-sidebar-menu {
+  padding-right: 1rem;
+  size: 6x;
+  cursor: pointer;
+}
+
+.social-icon-menu {
+  padding-right: 0.2rem;
+  size: 6x;
+  cursor: pointer;
+}
+
+.sidebar-menu-pointer {
+  cursor: pointer;
+}
+
+.main-menu-center-both {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginWrapper {
+  margin: 20px;
+  background: #fff;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px gray;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.loginInputSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonsSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px;
+}
+
+.input-style {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(13, 88, 202);
+  justify-content: center;
+  align-content: center;
+  font-size: 2rem;
+}
+
+.link-style {
+  text-decoration: none;
+}
+
+/* Login page styles */
+
+.login-form {
+  width: 340px;
+  margin: 30px auto;
+}
+.login-form form {
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+.login-form h2 {
+  margin: 0 0 15px;
+}
+.login-form .hint-text {
+  color: #777;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.form-control,
+.btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+.login-btn {
+  font-size: 15px;
+  font-weight: bold;
+}
+.or-seperator {
+  margin: 20px 0 10px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+.or-seperator i {
+  padding: 0 10px;
+  background: #f7f7f7;
+  position: relative;
+  top: -11px;
+  z-index: 1;
+}
+.social-btn .btn {
+  margin: 10px 0;
+  font-size: 15px;
+  text-align: left;
+  line-height: 24px;
+}
+.social-btn .btn i {
+  float: left;
+  margin: 4px 15px 0 5px;
+  min-width: 15px;
+}
+.input-group-addon .fa {
+  font-size: 18px;
+}

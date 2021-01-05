@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "healthtrack2747e728": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
