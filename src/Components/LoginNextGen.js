@@ -10,7 +10,9 @@ import { device } from "./device";
 import LoginBig from "../Images/login.jpg";
 import LoginWithKeyboard from "../Images/login-with-key.jpg";
 import RegisterCloudImage from "../Images/Cloud-Road.jpeg";
-import HelpImage from "../Images/help.jpg";
+import HelpImage1 from "../Images/help.jpg";
+import HelpImage from "../Images/AI.jpg";
+
 import Help from "./Help";
 import ForgotPassword from "./ForgotPassword";
 import Architecture from "./Architecture";
