@@ -60,5 +60,5 @@
     },
     "permissions": [],
     "dependsOn": [],
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://thecloudthoughts.com/home/\",\"http://localhost:3000/home/\"],\"LogoutURLs\":[\"https://thecloudthoughts.com/\",\"http://localhost:3000/\"]}"
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://thecloudthoughts.com/home/\",\"https://thecloudthoughts.com/home/\"],\"LogoutURLs\":[\"https://thecloudthoughts.com/\",\"https://thecloudthoughts.com/\"]}"
 }
