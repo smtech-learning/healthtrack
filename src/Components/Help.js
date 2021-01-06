@@ -64,7 +64,7 @@ class Help extends Component {
               <ChatBot
                 title='thecloudthoughts.com'
                 theme={myTheme}
-                botName='MakeAppointmentMOBILEHUB'
+                botName='BookTrip_beta'
                 welcomeMessage='Welcome I am an AI powered  Robot, how can I help you today?'
                 onComplete={this.handleComplete.bind(this)}
                 clearOnComplete={true}

@@ -1,6 +1,6 @@
 {
     "identityPoolName": "healthtrack2747e728_identitypool_2747e728",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "health2747e728",
     "userPoolName": "healthtrack2747e728_userpool_2747e728",
     "autoVerifiedAttributes": [
