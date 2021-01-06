@@ -11,7 +11,7 @@ const myTheme = {
   ...AmplifyTheme,
   sectionHeader: {
     ...AmplifyTheme.sectionHeader,
-    backgroundColor: "#222"
+    backgroundColor: '#11698E'
   }
 };
 
@@ -38,7 +38,9 @@ const Wrapper = styled(Card)`
 const HelpInputSection = styled.div`
   @media ${device.tablet} {
     max-width: 600px;
+    margin: 40px;
   }
+  margin: 40px;
   max-width: 350px;
   display: flex;
   flex-direction: row;
@@ -60,16 +62,16 @@ class Help extends Component {
       <StylesProvider injectFirst>
         <ThemeProvider theme={theme}>
           <HelpInputSection>
-            <Wrapper>
+           
               <ChatBot
-                title='thecloudthoughts.com'
+                title='Your questions answered 24 X 7 X 365'
                 theme={myTheme}
                 botName='BookTrip_beta'
-                welcomeMessage='Welcome I am an AI powered  Robot, how can I help you today?'
+                welcomeMessage='I am your human like asistant...how can I help you today?'
                 onComplete={this.handleComplete.bind(this)}
                 clearOnComplete={true}
               />
-            </Wrapper>
+           
           </HelpInputSection>
         </ThemeProvider>
       </StylesProvider>
@@ -78,3 +80,5 @@ class Help extends Component {
 }
 
 export default Help;
+
+//Blue section back ground :  <Wrapper>  </Wrapper>

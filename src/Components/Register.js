@@ -184,7 +184,6 @@ class Register extends Component {
   render() {
     if (!this.state.signedup) {
       const { errors, errorcount, isFormValid } = this.state;
-
       return (
         <StylesProvider injectFirst>
           <ThemeProvider theme={theme}>
