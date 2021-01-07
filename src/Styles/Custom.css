@@ -148,7 +148,21 @@
   grid-template-areas: "header header header" "body body body" "footer footer footer";
 }
 
+.home-container {
+  min-height: 100vh;
+  background-color: skyblue;
+  display: grid;
+  grid-template-columns: 0.5fr auto 0.5fr;
+  grid-template-rows: 0.08fr auto 0fr;
+  grid-template-areas: "header header header" "body body body" "footer footer footer";
+}
+
 .header-item {
+  grid-area: header;
+  background-color: white;
+}
+
+.header-item-home {
   grid-area: header;
   background-color: white;
 }

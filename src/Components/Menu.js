@@ -18,19 +18,19 @@ export default class Menu extends Component {
       <span className='App-header'>
         <span id='span-menu-item2'>
           <NavLink to='/home/addProducts' activeStyle={{ color: "white" }}>
-            Add Products
+              Add your biometrics
           </NavLink>
         </span>
 
         <span id='span-menu-item2'>
           <NavLink to='/home/searchProducts' activeStyle={{ color: "white" }}>
-            Search Products
+            Search biometrics trends
           </NavLink>
         </span>
 
         <span id='span-menu-item4'>
           <NavLink to='/home/logout' activeStyle={{ color: "white" }}>
-            Logout
+            Sign Out
           </NavLink>
         </span>
       </span>

@@ -23,6 +23,7 @@ import Footer from "./Footer";
 import {SignIn} from 'aws-amplify-react'
 import { Auth, Hub } from 'aws-amplify'
 import NotLoggedIn from './Notloggedin';
+import HealthImage from "../Images/health-background.jpeg";
 
 
 
@@ -44,6 +45,27 @@ function Home() {
     }
   }
   
+  const HealthBackground = styled.div`
+    grid-area: body;
+    @media ${device.tablet} {
+      background-image: url(${HealthImage});
+    }
+    background-image: url(${HealthImage});
+    filter: brightness(80%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top left;
+    display: flex;
+    flex-direction: row;
+    @media ${device.tablet} {
+      justify-content: flex-end;
+    }
+    justify-content: flex-start;
+    /* align-items: center; */
+  `;
+
+
   async function checkUser() {
     try {
       Auth.currentAuthenticatedUser({
@@ -58,34 +80,38 @@ function Home() {
   return (
     <div> 
     {isAuthenticated === 'Yes' && (
-      <div>
-        <Menu />
+        <div className='home-container'>
+          <div className="header-item-home">
+            <Menu />
+          </div>
         <Switch>
-          <Route path="/home/searchProducts" component={SearchProducts} />
-          <Route path='/home/addProducts' exact component={DisplayProducts} />
-          <Route path='/home/help' exact component={Help} />
-          <Route path='/home/logout' exact component={Logout} />
+            <Route path="/home/searchProducts">
+              <HealthBackground>
+                <SearchProducts />
+              </HealthBackground>
+              
+            </Route> 
+            <Route path='/home/addProducts'>
+                <HealthBackground>
+                    <DisplayProducts />
+                </HealthBackground>
+            </Route>
+            <Route path='/home/help'>
+              <Help />
+            </Route>
+            <Route path='/home/logout'>
+            <Logout />
+            </Route>
           <Route render={() => { return (<h1> Select the Item above</h1>) }} />
         </Switch>
       </div>
       )}
-      
       {isAuthenticated === 'No' && (
         <div>
           <NotLoggedIn/>
         </div>
         )}
     </div>
-  
   )
 }
-
 export default Home;
-
-// <AmplifyAuthenticator>
-//<AmplifySignIn slot="sign-in" hideSignUp></AmplifySignIn>
-//The following code helps to use our own login page
-
-//<Authenticator hideDefault={true} amplifyConfig={awsmobile}> 
-//  <Login override={'SignIn'} />
- // <AmplifySignOut/>

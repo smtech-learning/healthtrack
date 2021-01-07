@@ -116,7 +116,7 @@ export default function LoginNextGen() {
       <div className='header-item'>
         <PreloginNavigation />
       </div>
-      <SidebarMenu />
+      <SidebarMenu/>
       <Switch>
         <Route path='/' exact>
           <HomeBackground>

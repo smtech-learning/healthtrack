@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import Menu from './Menu';
 import { withAuthenticator, AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import styled from "styled-components";
+import { device } from "./device";
+import HelpImage1 from "../Images/help.jpg";
+import HelpImage from "../Images/AI.jpg";
 
 export default class DisplayProducts extends Component {
  
@@ -21,7 +25,6 @@ export default class DisplayProducts extends Component {
 
   handlesubmit(e) {
     e.preventDefault();
-    console.log('IN');  
     const { productId, productShortName, productLongName, productOriginalPrice, productSalePrice, productStatus } = this.state;
     fetch('http://api.thecloudthoughts.com/addProduct', {
       method: 'POST',
@@ -38,6 +41,24 @@ export default class DisplayProducts extends Component {
     .then(res => console.log(res))
  
   }
+
+   HelpBackground = styled.div`
+      grid-area: body;
+      @media ${device.tablet} {
+        background-image: url(${HelpImage});
+      }
+      background-image: url(${HelpImage});
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: top left;
+      display: flex;
+      flex-direction: row;
+      @media ${device.tablet} {
+        justify-content: flex-end;
+      }
+      justify-content: flex-start;
+`;
   
 handlechnage(e) {
       if (e.target.name === 'productId') {
@@ -57,8 +78,8 @@ handlechnage(e) {
 }
   render() {
     return (
-        <div>
-        <h1> Add a Product </h1>
+      <div>
+        <h1> Add your biometrics </h1>
 
         <form onSubmit={this.handlesubmit} class="form-container">
           <input type="text" className="login-style" name="productId" placeholder="Enter Productor Id" onChange={this.handlechnage} />
@@ -71,7 +92,6 @@ handlechnage(e) {
           <button class="btn"> Submit  </button>
         </form>
         
-
         </div>
     )
   }
