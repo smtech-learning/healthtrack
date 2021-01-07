@@ -17,13 +17,13 @@ export default class DisplayProducts extends Component {
     }
     this.handlechnage = this.handlechnage.bind(this);
     this.handlesubmit = this.handlesubmit.bind(this);
-} 
+}
 
   handlesubmit(e) {
     e.preventDefault();
     console.log('IN');  
     const { productId, productShortName, productLongName, productOriginalPrice, productSalePrice, productStatus } = this.state;
-    fetch('https://hlmba3niui.execute-api.us-east-1.amazonaws.com/Stage/addProduct', {
+    fetch('http://api.thecloudthoughts.com/addProduct', {
       method: 'POST',
       headers: new Headers({ 'Content-Type': 'application/json' }),
       body: JSON.stringify({
