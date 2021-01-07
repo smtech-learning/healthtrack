@@ -18,9 +18,10 @@ const myTheme = {
 const theme = {
   colors: {
     primary: "#0077B5",
-    secondary: "#000000"
+    secondary: "#000000",
   }
 };
+
 
 const Wrapper = styled(Card)`
   margin: 20px;
@@ -48,6 +49,14 @@ const HelpInputSection = styled.div`
   align-items: center;
 `;
 
+const windowSize = {
+  width: '100px',
+  height: '100px'
+
+};
+
+
+
 class Help extends Component {
   handleComplete(err, confirmation) {
     if (err) {
@@ -63,7 +72,8 @@ class Help extends Component {
         <ThemeProvider theme={theme}>
           <HelpInputSection>
            
-              <ChatBot
+            <ChatBot 
+                style={windowSize}
                 title='Your questions answered 24 X 7 X 365'
                 theme={myTheme}
                 botName='BookTrip_beta'

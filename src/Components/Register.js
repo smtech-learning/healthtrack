@@ -29,6 +29,9 @@ const theme = {
   }
 };
 
+
+
+
 const Wrapper = styled(Card)`
   margin: 20px;
   background: ${props => props.theme.colors.primary};
@@ -132,10 +135,9 @@ class Register extends Component {
     }
   };
 
+
   handlesubmit(e) {
     e.preventDefault();
-    console.log("in else condition 1st");
-
     const {
       username,
       password,
@@ -182,6 +184,7 @@ class Register extends Component {
   }
 
   render() {
+    
     if (!this.state.signedup) {
       const { errors, errorcount, isFormValid } = this.state;
       return (
@@ -196,14 +199,14 @@ class Register extends Component {
                     </h5>
                   )}
 
-                  <div class='form-group'>
-                    <div class='input-group'>
-                      <span class='input-group-addon'>
-                        <i class='fa fa-user'></i>
+                  <div className='form-group'>
+                    <div className='input-group'>
+                      <span className='input-group-addon'>
+                        <i className='fa fa-user'></i>
                       </span>
                       <input
                         type='text'
-                        class='form-control'
+                        className='form-control'
                         autocomplete='off_randomstring'
                         name='username'
                         placeholder='Enter user id (min 8 length)'
@@ -217,14 +220,14 @@ class Register extends Component {
                     <span className='errorStyle'>{errors.username}</span>
                   )}
 
-                  <div class='form-group'>
-                    <div class='input-group'>
-                      <span class='input-group-addon'>
-                        <i class='fa fa-user'></i>
+                  <div className='form-group'>
+                    <div className='input-group'>
+                      <span className='input-group-addon'>
+                        <i className='fa fa-envelope'></i>
                       </span>
                       <input
                         type='text'
-                        class='form-control'
+                        className='form-control'
                         autocomplete='off_randomstring'
                         name='email'
                         placeholder='Enter e-mail address'
@@ -238,31 +241,12 @@ class Register extends Component {
                     <span className='errorStyle'>{errors.email}</span>
                   )}
 
-                  <div class='form-group'>
-                    <div class='input-group'>
-                      <span class='input-group-addon'>
-                        <i class='fa fa-user'></i>
-                      </span>
-                      <input
-                        type='password'
-                        class='form-control'
-                        autocomplete='off_randomstring'
-                        name='password'
-                        placeholder='Enter Password (minimum 8 characters is needed)'
-                        required='required'
-                        onChange={this.handleChange}
-                      />
-                    </div>
-                  </div>
+                  
 
-                  {errors.password.length > 0 && (
-                    <span className='errorStyle'>{errors.password}</span>
-                  )}
-
-                  <div class='form-group'>
-                    <div class='input-group'>
-                      <span class='input-group-addon'>
-                        <i class='fa fa-user'></i>
+                  <div className='form-group'>
+                    <div className='input-group'>
+                      <span className='input-group-addon'>
+                        <i class="fa fa-mobile-phone"></i>
                       </span>
                       <input
                         type='text'
@@ -279,6 +263,27 @@ class Register extends Component {
                   {errors.phone_number.length > 0 && (
                     <span className='errorStyle'>{errors.phone_number}</span>
                   )}
+
+                  <div className='form-group'>
+                  <div className='input-group'>
+                    <span className='input-group-addon'>
+                      <i className='fa fa-lock'></i>
+                    </span>
+                    <input
+                      type='password'
+                      className='form-control'
+                      autocomplete='off_randomstring'
+                      name='password'
+                      placeholder='Enter Password (minimum 8 characters is needed)'
+                      required='required'
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                </div>
+
+                {errors.password.length > 0 && (
+                  <span className='errorStyle'>{errors.password}</span>
+                )}
                   <br />
                   <button
                     className='btn btn-primary'
@@ -305,10 +310,11 @@ class Register extends Component {
               <Wrapper>
                 <form onSubmit={this.handlesubmit} autoComplete='off'>
                   <h5>
-                    Stay on this Page. You should have received the verification
-                    code in the e-mail. Plese check the e-mail and enter the
-                    verification code below and click Submit !
+                    <span style={{color: '#fff'}}> Stay on this Page !!  You should have received the verification
+                    code in the e-mail.  <br /><br />Plese check the e-mail and enter the
+                    verification code below and click Submit to confirm your registration! </span>
                   </h5>
+                  <br />
                   {this.state.hasError && (
                     <h5 className='errorStyle'>
                       {this.state.errorDescription}
@@ -318,7 +324,7 @@ class Register extends Component {
                   <div class='form-group'>
                     <div class='input-group'>
                       <span class='input-group-addon'>
-                        <i class='fa fa-user'></i>
+                        <i class='fa fa-lock'></i>
                       </span>
                       <input
                         type='text'
@@ -345,7 +351,9 @@ class Register extends Component {
           <div className='form-container'>
             <h3> Congratulations !! Registration successfully completed. </h3>
             <br />
-            <button className='btn btn-primary'> Go to Login Page </button>
+            <Link to='/login' className='btn btn-primary'>
+                     Go Login !!!
+                </Link>
           </div>
         </div>
       );
