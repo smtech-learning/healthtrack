@@ -17,7 +17,7 @@ export default class DisplayProducts extends Component {
     }
     this.handlechnage = this.handlechnage.bind(this);
     this.handlesubmit = this.handlesubmit.bind(this);
-}
+} 
 
   handlesubmit(e) {
     e.preventDefault();
