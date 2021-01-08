@@ -24,6 +24,7 @@ import {SignIn} from 'aws-amplify-react'
 import { Auth, Hub } from 'aws-amplify'
 import NotLoggedIn from './Notloggedin';
 import HealthImage from "../Images/health-background.jpeg";
+import PostLoginHomeImage from '../Images/healthyfood.jpg';
 
 
 
@@ -47,15 +48,41 @@ function Home() {
   
   const HealthBackground = styled.div`
     grid-area: body;
-    @media ${device.tablet} {
-      background-image: url(${HealthImage});
-    }
-    background-image: url(${HealthImage});
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(${HealthImage});
+ 
     filter: brightness(80%);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: center center;
+    display: flex;
+    flex-direction: row;
+    @media ${device.tablet} {
+      justify-content: flex-end;
+    }
+    justify-content: flex-start;
+    /* align-items: center; */
+  `;
+
+  const PostLoginHome = styled.div`
+    grid-area: body;
+    filter: brightness(50%);
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(${PostLoginHomeImage});
+    filter: brightness(80%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     flex-direction: row;
     @media ${device.tablet} {
@@ -84,6 +111,10 @@ function Home() {
           <div className="header-item-home">
             <Menu />
           </div>
+          <PostLoginHome>
+            <div className='health-content-center'>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+            </PostLoginHome>
         <Switch>
             <Route path="/home/searchProducts">
               <HealthBackground>
@@ -102,7 +133,7 @@ function Home() {
             <Route path='/home/logout'>
             <Logout />
             </Route>
-          <Route render={() => { return (<h1> Select the Item above</h1>) }} />
+         
         </Switch>
       </div>
       )}

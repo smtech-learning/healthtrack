@@ -86,6 +86,16 @@
   justify-content: space-evenly;
 }
 
+.health-content-center {
+  min-height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: calc(15px + 2vmin);
+  color: white;
+  padding: 50px;
+}
+
 .inv-container {
   padding: 10px;
   display: flex;
@@ -173,9 +183,7 @@
 .body-item1 {
   grid-area: body;
   background-color: white;
-  /* background-image: url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
   background-image: url("../Images/cloud-computing.jpg");
-  /* background-image: url("../Images/Serverless.png"); */
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
