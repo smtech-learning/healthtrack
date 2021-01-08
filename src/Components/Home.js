@@ -24,7 +24,7 @@ import {SignIn} from 'aws-amplify-react'
 import { Auth, Hub } from 'aws-amplify'
 import NotLoggedIn from './Notloggedin';
 import HealthImage from "../Images/health-background.jpeg";
-import PostLoginHomeImage from '../Images/healthyfood.jpg';
+import PostLoginHomeImage from '../Images/shoes.jpg';
 
 
 
@@ -45,16 +45,15 @@ function Home() {
       }
     }
   }
+
+  const healthMessage = "We are what we eat and having an healthy life style is more important than ever. One way to get motivated is knowing what it means to be healthy and how do we measure. This is an effort to capture how eating & life style habits impacts the health and readings. Appreciate if you can add your data here. We don't ask any PII data here. It's just a simple 8 to 10 fields you need to enter. We stress again, no PII data we are capturing here and not associating the data with login profile either to keep data anonymous. Please click Add Biometrics link above to start and THANK YOU !"
   
   const HealthBackground = styled.div`
     grid-area: body;
-    background-image: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(${HealthImage});
- 
+    @media ${device.tablet} {
+      background-image: url(${HealthImage});
+    }
+    background-image: url(${HealthImage});
     filter: brightness(80%);
     background-size: cover;
     background-attachment: fixed;
@@ -113,7 +112,8 @@ function Home() {
           </div>
           <PostLoginHome>
             <div className='health-content-center'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+            {healthMessage}  
+            </div>
             </PostLoginHome>
         <Switch>
             <Route path="/home/searchProducts">

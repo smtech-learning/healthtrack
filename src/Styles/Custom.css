@@ -90,7 +90,9 @@
   min-height: 7vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
+  align-content: left;
+  text-align: left;
   font-size: calc(15px + 2vmin);
   color: white;
   padding: 50px;
