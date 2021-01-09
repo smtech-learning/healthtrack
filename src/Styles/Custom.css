@@ -334,3 +334,74 @@
 .input-group-addon .fa {
   font-size: 18px;
 }
+
+/********************************/
+.form-style-4 {
+  margin: 20px;
+  width: 100%;
+  font-size: 16px;
+  background: #1e75cc;
+  padding: 30px 30px 15px 30px;
+  border: 1px solid #53687e;
+}
+.form-style-4 input[type="submit"],
+.form-style-4 input[type="button"],
+.form-style-4 input[type="text"],
+.form-style-4 input[type="email"],
+.form-style-4 textarea,
+.form-style-4 label {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #fff;
+}
+.form-style-4 label {
+  display: block;
+  margin-bottom: 10px;
+}
+.form-style-4 label > span {
+  display: inline-block;
+  float: left;
+  width: 250px;
+}
+.form-style-4 input[type="text"],
+.form-style-4 input[type="email"] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #83a4c5;
+  width: 275px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
+}
+.form-style-4 textarea {
+  font-style: italic;
+  padding: 0px 0px 0px 0px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px dashed #83a4c5;
+  width: 275px;
+  overflow: hidden;
+  resize: none;
+  height: 20px;
+}
+
+.form-style-4 textarea:focus,
+.form-style-4 input[type="text"]:focus,
+.form-style-4 input[type="email"]:focus,
+.form-style-4 input[type="email"] :focus {
+  border-bottom: 1px dashed #d9ffa9;
+}
+
+.form-style-4 input[type="submit"],
+.form-style-4 input[type="button"] {
+  background: #576e86;
+  border: none;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  color: #a8bace;
+}
+.form-style-4 input[type="submit"]:hover,
+.form-style-4 input[type="button"]:hover {
+  background: #394d61;
+}

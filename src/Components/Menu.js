@@ -16,6 +16,12 @@ export default class Menu extends Component {
   render() {
     return (
       <span className='App-header'>
+        
+      <span id='span-menu-item2'>
+      <NavLink to='/home' activeStyle={{ color: "white" }}>
+          Home
+      </NavLink>
+    </span>
         <span id='span-menu-item2'>
           <NavLink to='/home/addProducts' activeStyle={{ color: "white" }}>
               Add your biometrics

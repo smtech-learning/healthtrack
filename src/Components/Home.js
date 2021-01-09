@@ -62,10 +62,12 @@ function Home() {
     display: flex;
     flex-direction: row;
     @media ${device.tablet} {
-      justify-content: flex-end;
+      align-content: center;
+      justify-content: center;
     }
     justify-content: flex-start;
-    /* align-items: center; */
+    align-content: center;
+    justify-content: center;
   `;
 
   const PostLoginHome = styled.div`
@@ -110,12 +112,14 @@ function Home() {
           <div className="header-item-home">
             <Menu />
           </div>
-          <PostLoginHome>
+          <Route path="/home">
+            <PostLoginHome>
             <div className='health-content-center'>
             {healthMessage}  
             </div>
             </PostLoginHome>
-        <Switch>
+        </Route>
+          <Switch>
             <Route path="/home/searchProducts">
               <HealthBackground>
                 <SearchProducts />

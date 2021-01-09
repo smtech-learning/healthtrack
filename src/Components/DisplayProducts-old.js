@@ -6,20 +6,11 @@ import { device } from "./device";
 import HelpImage1 from "../Images/help.jpg";
 import HelpImage from "../Images/AI.jpg";
 
-const Container = styled.div`
-        display: flex;
-        flex-direction:row;
-        justify-content: center;
-        align-items: center;
-        @media ${device.tablet} {
-          align-content: center;
-          justify-content: center;
-        }
-    `;
-
 export default class DisplayProducts extends Component {
+ 
   constructor(props) {
     super(props);
+
     this.state = {
       productId: '',
       productShortName: '',
@@ -47,8 +38,27 @@ export default class DisplayProducts extends Component {
         "productStatus":productStatus
       })
     })
-    .then(res => console.log(res)) 
+    .then(res => console.log(res))
+ 
   }
+
+   HelpBackground = styled.div`
+      grid-area: body;
+      @media ${device.tablet} {
+        background-image: url(${HelpImage});
+      }
+      background-image: url(${HelpImage});
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: top left;
+      display: flex;
+      flex-direction: row;
+      @media ${device.tablet} {
+        justify-content: flex-end;
+      }
+      justify-content: flex-start;
+`;
   
 handlechnage(e) {
       if (e.target.name === 'productId') {
@@ -67,37 +77,22 @@ handlechnage(e) {
     }
 }
   render() {
-      
-    
     return (
-      <Container>
-          <form onSubmit={this.handlesubmit} className="form-style-4" action="" method="post">
-            <label for="productId">
-            <span>Product Id</span><input type="text" name="productId" required="true" onChange={this.handlechnage} />
-            </label>
-            <label for="productShortName">
-            <span>Product Short Name</span><input type="text" name="productShortName" required="true" onChange={this.handlechnage} />
-            </label>
-            <label for="productLongName">
-            <span>Product Long Name</span><input type="text" name="productLongName" required="true" onChange={this.handlechnage} />
-            </label>
-            <label for="productOriginalPrice">
-            <span>Product Original Price</span><input type="text" name="productOriginalPrice" required="true" onChange={this.handlechnage} />
-            </label>
-            <label for="productSalePrice">
-            <span>Product Sale Price</span><input type="text" name="productSalePrice" required="true" onChange={this.handlechnage} />
-            </label>
-            <label for="productStatus">
-            <span>Product Status</span><input type="text" name="productStatus" required="true" onChange={this.handlechnage} />
-            </label>
-            <label for="field4">
-            <span>Message to Us</span><textarea name="field4" onkeyup="adjust_textarea(this)" required="true"></textarea>
-            </label>
-            <label>
-            <span> </span><input type="submit" onClick={this.handlesubmit} value="Send it over !" />
-            </label>
+      <div>
+        <h1> Add your biometrics </h1>
+
+        <form onSubmit={this.handlesubmit} class="form-container">
+          <input type="text" className="login-style" name="productId" placeholder="Enter Productor Id" onChange={this.handlechnage} />
+          <input type="text" className="login-style" name="productShortName" placeholder="Enter Product Short Name" onChange={this.handlechnage} />
+          <input type="text" className="login-style" name="productLongName" placeholder="Enter Product Long Name" onChange={this.handlechnage} />
+          <input type="text" className="login-style" name="productOriginalPrice" placeholder="Enter Original Price" onChange={this.handlechnage} />
+          <input type="text" className="login-style" name="productSalePrice" placeholder="Enter Sale Price" onChange={this.handlechnage} />
+          <input type="text" className="login-style" name="productStatus" placeholder="Enter Product Status" onChange={this.handlechnage} />
+
+          <button class="btn"> Submitt  </button> 
         </form>
-        </Container>
+        
+        </div> 
     )
   }
 }
