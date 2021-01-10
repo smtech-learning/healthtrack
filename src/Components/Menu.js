@@ -24,13 +24,13 @@ export default class Menu extends Component {
     </span>
         <span id='span-menu-item2'>
           <NavLink to='/home/addProducts' activeStyle={{ color: "white" }}>
-              Add your biometrics
+              Add
           </NavLink>
         </span>
 
         <span id='span-menu-item2'>
           <NavLink to='/home/searchProducts' activeStyle={{ color: "white" }}>
-            Search biometrics trends
+            Search
           </NavLink>
         </span>
 
