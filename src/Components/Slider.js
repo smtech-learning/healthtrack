@@ -8,6 +8,7 @@ import Image2 from "../Images/winter-tree.jpg";
 import Image3 from "../Images/3.jpg";
 import Image4 from "../Images/4.jpg";
 import Image5 from "../Images/cloud-image1.JPG";
+//import Image5 from "../Images/faas.png";
 import ImgApigateway from "../Images/Apigateway.png";
 import ImagApigateway from "../Images/ImgApigateway.png";
 import ImgServerlessdb from "../Images/serverlessdb.png";

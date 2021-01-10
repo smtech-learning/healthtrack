@@ -14,7 +14,7 @@ import LoginContainer from './LoginNextGen';
 import Amplify from "aws-amplify";
 import awsmobile from "../aws-exports";
 import PreloginNavigation from "./PreloginNavigation";
-import SidebarMenu from "../Components/SidebarMenu";
+import SidebarMenu from "./SidebarMenu";
 import styled from "styled-components";
 import { device } from "./device";
 import LoginBig from "../Images/login.jpg";
@@ -115,8 +115,7 @@ function Home() {
           <Route path="/home">
             <PostLoginHome>
             <div className='health-content-center'>
-                {healthMessage}  
-             
+            {healthMessage}  
             </div>
             </PostLoginHome>
         </Route>

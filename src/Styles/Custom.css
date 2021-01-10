@@ -87,6 +87,7 @@
 }
 
 .health-content-center {
+  background: rgba(0, 0, 0, 0.5);
   min-height: 7vh;
   display: flex;
   flex-direction: row;
@@ -404,4 +405,13 @@
 .form-style-4 input[type="submit"]:hover,
 .form-style-4 input[type="button"]:hover {
   background: #394d61;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }

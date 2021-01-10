@@ -71,7 +71,7 @@ export default function PreloginNavigation() {
           </LineItem>
           <LineItem>
             <Link to='/login' className='main-menu-center-both'>
-              <FaSignInAlt className='social-icon-menu fa-1x' /> Sign in
+              <FaSignInAlt className='social-icon-menu fa-1x' /> Signin
             </Link>
           </LineItem>
           <LineItem>
